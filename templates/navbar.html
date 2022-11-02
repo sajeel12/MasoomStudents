@@ -1,8 +1,8 @@
-{% load staticfiles %}
+{% load static %}
 <header class="header header--loggedIn">
     <div class="container">
       <a href="{% url 'home' %}" class="header__logo">
-        <img src="{%  staticfiles 'images/ms.png' %} " />
+        <img src="{%  static 'images/ms.png' %} " />
         <h1></h1>
       </a>
       <form class="header__search" method="get" action=" {% url 'home' %} ">
