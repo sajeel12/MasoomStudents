@@ -147,7 +147,7 @@ STATICFILES_DIRS  = [
 
 ]
 
-MEDIA_ROOT =  BASE_DIR / 'staticfiles/images'
+MEDIA_ROOT =  BASE_DIR / 'static/images'
 
 
 # heroku
