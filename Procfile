@@ -1,1 +1,1 @@
-web: gunicorn studybud(Heruku).wsgi --log-file -
+web: gunicorn studybudheruku.wsgi --log-file -
