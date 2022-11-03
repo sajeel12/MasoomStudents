@@ -154,6 +154,7 @@ def createRoom(request):
 
 @login_required(login_url='login')
 def updateRoom(request, pk):
+    page = "update_room"
     topics = Topic.objects.all()
     room = Room.objects.get(id=pk)
     form = RoomForm(instance=room)   # for  getting previos form field data
@@ -163,16 +164,16 @@ def updateRoom(request, pk):
         return HttpResponse('<h3>you are not allowed here </h3> ')
 
     if request.method == 'POST':
-        topic_name = request.POST.get('topic')
-        topic, created = Topic.objects.get_or_create(name=topic_name)  # for checking if the already exist or bieng newly creared
+        # topic_name = request.POST.get('topic')
+        # topic, created = Topic.objects.get_or_create(name=topic_name)  # for checking if the already exist or bieng newly creared
         room.name = request.POST.get('name')
-        room.topic = topic
+        # room.topic = topic
         room.description = request.POST.get('description')
         room.save()
         return redirect('home')
         # request handling area End --
 
-    context = {'form': form, 'topics':topics , 'room':room}
+    context = {'form': form, 'topics':topics , 'room':room, 'page':page}
 
     return render(request, 'base/room_form.html', context)
 
