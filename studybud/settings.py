@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-@gpr&@@m5ru9d9+%tlrwf(5ng8+=c8jq9mq^q1arpm@c3jp&y^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['masoomstudents.herokuapp.com']
+ALLOWED_HOSTS = []
 
 # Application definition
 
