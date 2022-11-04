@@ -1,6 +1,9 @@
 {% extends 'main.html' %}
 {% block content %}
 
+
+ 
+
   <main class="create-room layout">
     <div class="container">
       <div class="layout__box">
@@ -73,12 +76,21 @@
 
             <div class="form__action">
               <a class="btn btn--dark" href="index.html">Cancel</a>
+
+              {% if  page == 'update_room' %}
+              <button class="btn btn--main" type="submit">Upadate Room</button>
+              {% else %}
               <button class="btn btn--main" type="submit">Create Room</button>
+              
+             {% endif %}
+
+              
             </div>
           </form>
         </div>
       </div>
     </div>
   </main>
+
 
 {% endblock %}
